@@ -3,7 +3,7 @@
 ## remove_repetitions
 
 1. This python scirpt reads a fasta file named `fasta_input.txt` in the same directory as the Python file `Remove_repetitions.py`.
-2. The Fasta file should have a sequence name, followed by the sequence in the next like, like in the following example
+2. The Fasta file should have a sequence name, followed by the sequence in the text like in the following example
 ```
     >A0A3M8AKQ8.1/53-513 Glycoside hydrolase family 68 protein {ECO:0000313|EMBL:RNB51771.1}
     MSTSTRRMRRPLVGGITAAGVLVGTLFTGTAAAVAQPDLQPGAEPTVHTQQAYAPEDDFTAKWTRADAKQLQRLSDPNAASRENSMPA
@@ -54,7 +54,7 @@ discarding all other lines in the file
 3.  ***How to use***
 - Copy the Stockholm format file in the same directory as the 'query_remover.py' script.
 - Run the script
-- A file called `output_file.txt` should appeat in the same directory.
+- A file called `output_file.txt` should appear in the same directory.
 
 
 
