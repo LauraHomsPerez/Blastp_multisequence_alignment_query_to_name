@@ -55,3 +55,26 @@ discarding all other lines in the file
 - Copy the Stockholm format file in the same directory as the 'query_remover.py' script.
 - Run the script
 - A file called `output_file.txt` should appeat in the same directory.
+
+
+
+
+## Remove all sequences, that are not Levansucrase from the FASTA file
+
+1. Open file with notepad++
+2. Find and Replace (Ctrl-H)
+3. Enable **Regex** with a tickbox.
+4. Search for the following: ```^>(?!.*Levansucrase ).*$\r\n.*\r\n```
+
+Explanation:
+```
+Levansucrase                       Literary matches Levansucrase
+(.*Levansucrase)                   Matches anything before Levansucrase, including Levansucrase
+(.*Levansucrase )                  Matches anything before Levansucrase, including Levansucrase and a space at the end
+(?!.*Levansucrase )                Inverses the previous match (matches anything, but somethig-something-Levansucrase)
+(?!.*Levansucrase ).*$             Matches any whole line that does not contain Levansucrase with a space at the end
+^>(?!.*Levansucrase ).*$           Matches any whole line that starts with > and does not contain Levansucrase with a space at the end.
+^>(?!.*Levansucrase ).*$\r\n.*     Matches anz whole line that starts with > ans does not contain Levansucrase with a space at the end, and a whole line after it.
+^>(?!.*Levansucrase ).*$\r\n.*\r\n Matches anz whole line that starts with > ans does not contain Levansucrase with a space at the end, and a whole line after it and a line break after that.
+
+```
