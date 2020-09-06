@@ -38,7 +38,8 @@ def pool_pfam_website(var_accnum):
 
 ```
 6. It reads the ACCESSION NUMBER from the FASTA file dowloaded from PFAM, searches it on the website, gives the SOURCE ORGANISM corresponding and writes it down in an output file
-named 'output_file_source_organism_names.txt'.
+named `output_file_source_organism_names.txt`.
+
 ```
 input_file = open("output_file_no_rep.txt","r")                                                 # Open the file and read it
 line_in_file = input_file.readlines()                                                           # Reads line in file
